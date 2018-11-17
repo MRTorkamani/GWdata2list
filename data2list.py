@@ -38,4 +38,4 @@ Pxx_L1, freqs = mlab.psd(strain_L1, Fs = fs, NFFT = NFFT)
 
 with open('test.txt', 'w') as f:
 	for H1 in Pxx_H1:
-f.write("%s\n" %(np.sqrt(H1)))
+		f.write("%s, %s\n" %(freqs, (np.sqrt(H1))))
